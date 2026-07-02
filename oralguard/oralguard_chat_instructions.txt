@@ -1,0 +1,100 @@
+======================================================================
+🦷 ORALGUARD SCREENING SYSTEM - PROJECT INSTRUCTIONS & DOCUMENTATION
+======================================================================
+This document is a compiled copy of the guides, setup steps, and project
+information discussed during the development of OralGuard.
+
+----------------------------------------------------------------------
+1. PROJECT STRUCTURE
+----------------------------------------------------------------------
+The project files are saved on your Desktop at:
+C:\Users\Puja Ahuja\Desktop\oralguard\
+
+* requirements.txt   - Defines python library dependencies.
+* triage_engine.py   - Clinical rules engine for Low/Medium/High Risk assessment.
+* agent.py           - Conversation state manager (with Gemini API & offline fallback).
+* app.py             - Streamlit Web Dashboard chat interface & clinical dossiers.
+* cli.py             - Command Line Terminal client.
+* test_triage.py     - 14 clinical unit test cases verifying risk calculations.
+* run.bat            - Setup & execution script (installs packages, runs tests, starts app).
+* README.md          - Clinical description and Kaggle execution guide.
+* oralguard_cover_banner.png - High-resolution branding image for your Kaggle cover.
+
+----------------------------------------------------------------------
+2. RUNNING AND TESTING LOCALLY
+----------------------------------------------------------------------
+* SINGLE STEP RUNNER:
+  Double-click "run.bat" inside your project directory. This script will
+  automatically install packages, run tests, and open the web browser.
+
+* MANUAL RUN COMMANDS:
+  Open Command Prompt or PowerShell, navigate to the folder, and run:
+  
+  a. Install requirements:
+     cd "C:\Users\Puja Ahuja\Desktop\oralguard"
+     pip install -r requirements.txt
+     
+  b. Run Triage Unit Tests:
+     python -m unittest test_triage.py
+     
+  c. Start Web Dashboard:
+     streamlit run app.py
+     
+  d. Run Terminal CLI client:
+     python cli.py
+
+* ACCESS WEB APP FROM BROWSER:
+  If the page does not open automatically on launch, open your browser and go to:
+  http://localhost:8501
+
+----------------------------------------------------------------------
+3. PUBLISHING ON GITHUB
+----------------------------------------------------------------------
+To upload your project to GitHub (for your public project link submission):
+
+1. Create a free account on https://github.com
+2. Click "New" to create a repository:
+   * Name: "oralguard"
+   * Select: "Public"
+   * Do NOT check "Add a README" or gitignore.
+   * Click "Create repository".
+3. Open terminal/PowerShell and run:
+   cd "C:\Users\Puja Ahuja\Desktop\oralguard"
+   git init
+   git add .
+   git commit -m "Initial commit of OralGuard Triage Agent"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-GITHUB-USERNAME/oralguard.git
+   git push -u origin main
+
+Your code and instructions will now be live on GitHub.
+
+----------------------------------------------------------------------
+4. STREAMLIT PUBLIC HOSTING (ONLINE DEMO)
+----------------------------------------------------------------------
+To host a live, clickable web link of your app for judges:
+
+1. Push your code to GitHub.
+2. Visit https://share.streamlit.io and sign in with GitHub.
+3. Click "New app".
+4. Select your "oralguard" repository, main branch, and type "app.py" as the main file path.
+5. Click "Deploy". Streamlit will deploy it to a URL like:
+   https://YOUR-APP-NAME.streamlit.app
+
+----------------------------------------------------------------------
+5. YOUTUBE VIDEO STRUCTURE GUIDE (MAX 5 MINUTES)
+----------------------------------------------------------------------
+Structure your YouTube demo video to cover:
+
+1. Introduction & Problem (0:00 - 1:00)
+   * Pitch: Introduce OralGuard as a clinical screening triage assistant built under 
+     the guidance of Dr. Urja Sunil Ahuja. State the problem (late-stage oral cancer detection).
+2. Why Conversational Agents? (1:00 - 2:00)
+   * Explain: Natural interviews reduce fatigue, skip irrelevant questions, and share 
+     explanations. Highlight the offline mode's capability to run on local laptops in rural camps.
+3. Live Demo (2:00 - 4:00)
+   * Demo the Streamlit App: Show chat interface, rationale tooltips, "Save & Exit" 
+     partial reports, and completing screening with recommendation reasoning lookups.
+4. Summary & Technical Stack (4:00 - 5:00)
+   * Tech: Built in Python using Streamlit, Gemini API, and verified using unittest.
+======================================================================
