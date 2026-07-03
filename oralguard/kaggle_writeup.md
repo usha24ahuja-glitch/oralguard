@@ -2,7 +2,7 @@
 
 ### Subtitle: An Offline-Resilient, Stateful Agent System for Clinical Triage and Early Intervention
 ### Submitted Track: AI for Social Good / Healthcare & Well-being
-### Author: Capstone Developer Group
+### Author: Dr. Urja Sunil Ahuja
 ### Clinical Advisor: Dr. Urja Sunil Ahuja
 
 ---
