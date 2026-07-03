@@ -1,7 +1,13 @@
 import streamlit as st
 import os
+import sys
 import json
+
+# Ensure python can find modules in the subdirectory when deployed on Streamlit Cloud
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from agent import OralGuardAgent
+
 from triage_engine import assess_risk, validate_inputs, get_recommended_advice, generate_partial_report, explain_recommendation, QUESTION_RATIONALES
 
 SESSION_FILE = "oralguard_session.json"
