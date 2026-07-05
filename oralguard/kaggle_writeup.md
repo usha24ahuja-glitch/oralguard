@@ -104,6 +104,8 @@ Designed as a clinical screening tool, OralGuard adheres to strict safety featur
 OralGuard is designed to be deployed in two configurations:
 *   **Local Desktop / Field Deployment**: Field clinicians can download the project folder, double-click the `run.bat` script, and run the app locally on a standard Windows laptop with no internet connection.
 *   **Cloud Hosting**: The Streamlit application can be hosted on Streamlit Community Cloud or Hugging Face Spaces. Clinicians can share a single link (e.g., `https://oralguard.streamlit.app`) to let patients screen themselves on mobile phones.
+    > [!NOTE]
+    > **Host Platform Sleep Behavior**: On free cloud hosting tiers like Streamlit Sharing, the application container may automatically sleep after a period of inactivity. If the live demo link appears asleep when accessed, please click the **"Yes, get this app back up!"** button; it will wake up and load within 30-40 seconds.
 
 ### 5. Antigravity IDE Integration
 The **Antigravity IDE Assistant** served as an automated pair-programmer:
